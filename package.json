@@ -1,0 +1,19 @@
+{
+  "name": "licensecontroler",
+  "version": "1.0.0",
+  "description": "API to control the registration of users and license of programs exemple.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/higordiasz/licensecontrol.git"
+  },
+  "author": "Dias",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/higordiasz/licensecontrol/issues"
+  },
+  "homepage": "https://github.com/higordiasz/licensecontrol#readme"
+}
