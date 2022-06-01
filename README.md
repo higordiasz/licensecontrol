@@ -3,7 +3,9 @@
 > It was created for educational purposes only.
 ---
 
-Example API for control license ande user using MongoDB.
+API example to control usage license and user registration using MongoDB
+
+---
 
 ## Installation
 
@@ -11,9 +13,13 @@ Example API for control license ande user using MongoDB.
 npm install
 ```
 
-## Usage
+---
 
-### User Endpoints
+## Endpoints
+
+---
+
+### User
 
 * [Post: http://localhost:3000/api/user/create](#usercreate)
 * [Delete: http://localhost:3000/api/user/delete](#userdelete)
@@ -21,21 +27,27 @@ npm install
 * [Get: http://localhost:3000/api/user/login](#userlogin)
 * [Get: http://localhost:3000/api/user/check](#usercheck)
 
-### License Endpoints
+---
+
+### License
 
 * [Get: http://localhost:3000/api/license/check](#licensecheck)
 * [Delete: http://localhost:3000/api/license/delete](#licensedelete)
 * [Get: http://localhost:3000/api/license/expiration](#licenseexpiration)
 * [Post: http://localhost:3000/api/license/add](#licenseadd)
 
-## Exemple Return
+## Exemple Usage
 
 ### Create User
 
 #### Request
+
+Url
 ```
-Url: http://localhost:3000/api/user/create
-Body (Json):
+http://localhost:3000/api/user/create
+```
+Body
+```json
 {
   "username":"username",
   "password":"pass",
