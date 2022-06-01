@@ -29,10 +29,10 @@ npm install
 * [Post: http://localhost:3000/api/license/add](#licenseadd)
 
 ## Exemple Usage
+### User
+#### Create User
 
-### Create User
-
-#### Request
+##### Request
 
 Url
 ```
@@ -47,7 +47,7 @@ Body
 }
 ```
 
-#### Success Case
+##### Success Case
 ```json
 {
   "status": 1,
@@ -62,7 +62,7 @@ Body
 }
 ```
 
-#### Error Case
+##### Error Case
 ```json
 {
   "status": 0,
@@ -71,20 +71,18 @@ Body
 }
 ```
 
-
-
-
 ---
-### Delete User
 
-#### Request
+#### Delete User
+
+##### Request
 
 Url
 ```
 http://localhost:3000/api/user/delete?token=usertoken&email=useremail@email.com
 ```
 
-#### Success Case
+##### Success Case
 ```json
 {
   "status": 1,
@@ -93,7 +91,7 @@ http://localhost:3000/api/user/delete?token=usertoken&email=useremail@email.com
 }
 ```
 
-#### Error Case
+##### Error Case
 ```json
 {
   "status": 0,
@@ -101,10 +99,12 @@ http://localhost:3000/api/user/delete?token=usertoken&email=useremail@email.com
   "data":[ ]
 }
 ```
----
-### Login User
 
-#### Request
+---
+
+#### Login User
+
+##### Request
 
 Url
 ```
@@ -118,7 +118,7 @@ Body
 }
 ```
 
-#### Success Case
+##### Success Case
 ```json
 {
   "status": 1,
@@ -133,7 +133,7 @@ Body
 }
 ```
 
-#### Error Case
+##### Error Case
 ```json
 {
   "status": 0,
@@ -141,10 +141,12 @@ Body
   "data":[ ]
 }
 ```
----
-### Password User
 
-#### Request
+---
+
+#### Password User
+
+##### Request
 
 Url
 ```
@@ -158,7 +160,7 @@ Body
 }
 ```
 
-#### Success Case
+##### Success Case
 ```json
 {
   "status": 1,
@@ -167,7 +169,7 @@ Body
 }
 ```
 
-#### Error Case
+##### Error Case
 ```json
 {
   "status": 0,
@@ -175,17 +177,19 @@ Body
   "data":[ ]
 }
 ```
----
-### Check User
 
-#### Request
+---
+
+#### Check User
+
+##### Request
 
 Url
 ```
 http://localhost:3000/api/user/check?email=email@email.com&username=username
 ```
 
-#### Success Case
+##### Success Case
 ```json
 {
   "status": 1,
@@ -194,7 +198,7 @@ http://localhost:3000/api/user/check?email=email@email.com&username=username
 }
 ```
 
-#### Error Case
+##### Error Case
 ```json
 {
   "status": 0,
@@ -202,7 +206,9 @@ http://localhost:3000/api/user/check?email=email@email.com&username=username
   "data":[ ]
 }
 ```
+
 ---
+
 ## Legal
 
 MIT License
