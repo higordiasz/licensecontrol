@@ -74,7 +74,7 @@ Body
 
 
 
-
+---
 ### Delete User
 
 #### Request
@@ -101,7 +101,7 @@ http://localhost:3000/api/user/delete?token=usertoken&email=useremail@email.com
   "data":[ ]
 }
 ```
-
+---
 ### Login User
 
 #### Request
@@ -141,7 +141,7 @@ Body
   "data":[ ]
 }
 ```
-
+---
 ### Password User
 
 #### Request
@@ -175,7 +175,7 @@ Body
   "data":[ ]
 }
 ```
-
+---
 ### Check User
 
 #### Request
@@ -202,7 +202,7 @@ http://localhost:3000/api/user/check?email=email@email.com&username=username
   "data":[ ]
 }
 ```
-
+---
 ## Legal
 
 MIT License
