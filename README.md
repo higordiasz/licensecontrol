@@ -30,7 +30,7 @@ npm install
 
 ## Exemple Usage
 ### User
-#### Create User
+#### Create
 
 ##### Request
 
@@ -73,7 +73,7 @@ Body
 
 ---
 
-#### Delete User
+#### Delete
 
 ##### Request
 
@@ -102,7 +102,7 @@ http://localhost:3000/api/user/delete?token=usertoken&email=useremail@email.com
 
 ---
 
-#### Login User
+#### Login
 
 ##### Request
 
@@ -144,7 +144,7 @@ Body
 
 ---
 
-#### Password User
+#### Password
 
 ##### Request
 
@@ -180,7 +180,188 @@ Body
 
 ---
 
-#### Check User
+#### Check
+
+##### Request
+
+Url
+```
+http://localhost:3000/api/user/check?email=email@email.com&username=username
+```
+
+##### Success Case
+```json
+{
+  "status": 1,
+  "err": "",
+  "data":[ ]
+}
+```
+
+##### Error Case
+```json
+{
+  "status": 0,
+  "err": "error string",
+  "data":[ ]
+}
+```
+
+---
+
+### License
+
+#### Check
+
+##### Request
+
+Url
+```
+http://localhost:3000/api/user/create
+```
+Body
+```json
+{
+  "username":"username",
+  "password":"pass",
+  "email":"email@email.com"
+}
+```
+
+##### Success Case
+```json
+{
+  "status": 1,
+  "err": "",
+  "data":[
+    {
+      "username": "",
+      "email":"",
+      "token":""
+    }
+  ]
+}
+```
+
+##### Error Case
+```json
+{
+  "status": 0,
+  "err": "error string",
+  "data":[ ]
+}
+```
+
+---
+
+#### Delete
+
+##### Request
+
+Url
+```
+http://localhost:3000/api/user/delete?token=usertoken&email=useremail@email.com
+```
+
+##### Success Case
+```json
+{
+  "status": 1,
+  "err": "",
+  "data":[  ]
+}
+```
+
+##### Error Case
+```json
+{
+  "status": 0,
+  "err": "error string",
+  "data":[ ]
+}
+```
+
+---
+
+#### Expiration
+
+##### Request
+
+Url
+```
+http://localhost:3000/api/user/login
+```
+Body
+```json
+{
+  "username":"username or email",
+  "password":"pass"
+}
+```
+
+##### Success Case
+```json
+{
+  "status": 1,
+  "err": "",
+  "data":[
+    {
+      "username": "",
+      "email":"",
+      "token":""
+    }
+  ]
+}
+```
+
+##### Error Case
+```json
+{
+  "status": 0,
+  "err": "error string",
+  "data":[ ]
+}
+```
+
+---
+
+#### Add
+
+##### Request
+
+Url
+```
+http://localhost:3000/api/user/password
+```
+Body
+```json
+{
+  "token":"token",
+  "newPassword":"pass"
+}
+```
+
+##### Success Case
+```json
+{
+  "status": 1,
+  "err": "",
+  "data":[ ]
+}
+```
+
+##### Error Case
+```json
+{
+  "status": 0,
+  "err": "error string",
+  "data":[ ]
+}
+```
+
+---
+
+
 
 ##### Request
 
