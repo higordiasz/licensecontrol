@@ -217,15 +217,7 @@ http://localhost:3000/api/user/check?email=email@email.com&username=username
 
 Url
 ```
-http://localhost:3000/api/user/create
-```
-Body
-```json
-{
-  "username":"username",
-  "password":"pass",
-  "email":"email@email.com"
-}
+http://localhost:3000/api/license/check?token=token
 ```
 
 ##### Success Case
@@ -233,13 +225,7 @@ Body
 {
   "status": 1,
   "err": "",
-  "data":[
-    {
-      "username": "",
-      "email":"",
-      "token":""
-    }
-  ]
+  "data":[  ]
 }
 ```
 
@@ -260,7 +246,7 @@ Body
 
 Url
 ```
-http://localhost:3000/api/user/delete?token=usertoken&email=useremail@email.com
+http://localhost:3000/api/license/delete?token=usertoken
 ```
 
 ##### Success Case
@@ -289,14 +275,7 @@ http://localhost:3000/api/user/delete?token=usertoken&email=useremail@email.com
 
 Url
 ```
-http://localhost:3000/api/user/login
-```
-Body
-```json
-{
-  "username":"username or email",
-  "password":"pass"
-}
+http://localhost:3000/api/license/expiration?token=usertoken
 ```
 
 ##### Success Case
@@ -305,11 +284,7 @@ Body
   "status": 1,
   "err": "",
   "data":[
-    {
-      "username": "",
-      "email":"",
-      "token":""
-    }
+    "date":""
   ]
 }
 ```
@@ -331,13 +306,13 @@ Body
 
 Url
 ```
-http://localhost:3000/api/user/password
+http://localhost:3000/api/license/add
 ```
 Body
 ```json
 {
   "token":"token",
-  "newPassword":"pass"
+  "days":"days"
 }
 ```
 
