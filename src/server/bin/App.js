@@ -1,13 +1,14 @@
 import Express from 'express';
 import Mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import bodyParser from 'body-parser';
 dotenv.config();
 
 const App = Express();
 
 //Model Declaration
-import { User } from '../models/user';
-import { License } from '../models/license';
+import User from '../models/user';
+import License from '../models/license';
 
 //Database Connection
 Mongoose.connect(process.env.DATABASE_CONNECTION_STRING, {
@@ -38,6 +39,12 @@ process.on('SIGINT', () => {
   });
 });
 
+//Body parser
+App.use(bodyParser.json());
+App.use(bodyParser.urlencoded({
+  extended: true
+}));
+
 //Use HTTPS
 App.use((req, res, next) => {
   if ((req.headers["x-forwarded-proto"] || "").endsWith("http"))
@@ -47,8 +54,8 @@ App.use((req, res, next) => {
 });
 
 //Routers
-import { userRouter } from '../routers/userRouter';
-import { licenseRouter } from '../routers/licenseRouter';
+import { userRouter } from '../routers/userRouter.js';
+import { licenseRouter } from '../routers/licenseRouter.js';
 
 App.use('/api/user', userRouter);
 App.use('/api/license', licenseRouter);

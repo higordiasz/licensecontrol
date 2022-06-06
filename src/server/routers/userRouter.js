@@ -1,15 +1,21 @@
 import Express from 'express';
-import { getUser, login, createUser, deleteUser } from '../controllers';
+import { getUser, login, createUser, deleteUser, alterPassword } from '../controllers';
 const userRouter = Express.Router();
 
 userRouter.get('/check', getUser);
 
 userRouter.delete('/delete', deleteUser);
 
-userRouter.get('/login', login);
+userRouter.post('/login', login);
 
-userRouter.post('/add', createUser);
+userRouter.post('/create', createUser);
+
+userRouter.put('/password', alterPassword);
 
 export {
+  userRouter
+};
+
+export default {
   userRouter
 };
