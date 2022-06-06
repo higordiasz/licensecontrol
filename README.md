@@ -312,37 +312,8 @@ Body
 ```json
 {
   "token":"token",
-  "days":"days"
+  "days": 10
 }
-```
-
-##### Success Case
-```json
-{
-  "status": 1,
-  "err": "",
-  "data":[ ]
-}
-```
-
-##### Error Case
-```json
-{
-  "status": 0,
-  "err": "error string",
-  "data":[ ]
-}
-```
-
----
-
-
-
-##### Request
-
-Url
-```
-http://localhost:3000/api/user/check?email=email@email.com&username=username
 ```
 
 ##### Success Case
